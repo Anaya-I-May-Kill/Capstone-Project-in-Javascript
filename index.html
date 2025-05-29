@@ -7,6 +7,7 @@
 
     <style>
       body {
+        background-color: #deb878;
         margin: 0;
         font-family: Consolas;
       }
@@ -34,6 +35,25 @@
         background-color: #8b9f89;
         color: #0f2232;
       }
+
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+
+      .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+
+      .my-slider {
+        display: none;
+        max-height: 100%;
+        width: 80%;
+      }
     </style>
   </head>
   <body>
@@ -43,5 +63,34 @@
       <a href="contact.html">Contact</a>
       <a href="gallery.html">Gallery</a>
     </div>
+
+    <h1>My Favourite Anime</h1>
+    <div class="carousel-container">
+      <img class="my-slider" src="Haikyuu.jpg" alt="Slide 1" />
+      <img class="my-slider" src="JJK.jpg" alt="Slide 2" />
+      <img class="my-slider" src="Blue Lock.jpg" alt="Slide 3" />
+    </div>
+
+    <script>
+      var index = 0;
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("my-slider");
+
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+
+        index++;
+        if (index > x.length) {
+          index = 1;
+        }
+        x[index - 1].style.display = "block";
+        setTimeout(carousel, 2000);
+      }
+
+      carousel();
+    </script>
   </body>
 </html>
