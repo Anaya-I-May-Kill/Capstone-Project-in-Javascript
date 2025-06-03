@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Menu - style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+        color: #fdf6ec;
+      }
+
+      .carousel-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+
+      .my-slider {
+        display: none;
+        width: 80%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="Menu - index.html">Home</a>
+      <a href="Menu - about.html">About</a>
+      <a href="Menu - contact.html">Contact</a>
+      <a href="Menu - gallery.html">Gallery</a>
+    </div>
+
+    <h1>Food & Beverages</h1>
+    <div class="carousel-container">
+      <img
+        class="my-slider"
+        src="https://i.pinimg.com/736x/da/3b/6a/da3b6a874a3ea8f1f39b17a79d6c3836.jpg"
+        alt="Slide 1"
+      />
+      <img
+        class="my-slider"
+        src="https://i.pinimg.com/736x/53/b5/52/53b55285bbb90f7a5e4918b92659d85d.jpg"
+        alt="Slide 2"
+      />
+      <img
+        class="my-slider"
+        src="https://i.pinimg.com/736x/83/f8/0d/83f80d1e5de2472ffa5359b3bd9844ee.jpg"
+        alt="Slide 3"
+      />
+    </div>
+
+    <script>
+      var index = 0;
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("my-slider");
+
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+
+        index++;
+        if (index > x.length) {
+          index = 1;
+        }
+        x[index - 1].style.display = "block";
+        setTimeout(carousel, 2000);
+      }
+
+      carousel();
+    </script>
+  </body>
+</html>
