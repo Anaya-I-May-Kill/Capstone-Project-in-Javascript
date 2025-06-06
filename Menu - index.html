@@ -7,6 +7,11 @@
     <title>Navigation</title>
 
     <style>
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
       h1 {
         text-align: center;
         text-decoration: underline;
@@ -36,9 +41,9 @@
 
         transition: 0.3s, box-shadow 0.3s;
 
-        float: left;
-
         line-height: 30px;
+
+        overflow: hidden;
       }
 
       .food-section:hover {
@@ -59,6 +64,57 @@
         font-size: 20px;
         line-height: 1.6;
         color: #fdf6ec;
+      }
+
+      #copyright {
+        position: sticky;
+
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.279);
+        color: #fdf6ec;
+        text-align: center;
+
+        margin-top: auto;
+      }
+
+      #stuff {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: #fdf6ec;
+        text-align: center;
+
+        margin-top: auto;
+      }
+
+      .div1,
+      .div2,
+      .div3 {
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        background-color: rgba(255, 255, 255, 0.103);
+        margin: 10px;
+        padding-left: 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      #divs {
+        background-color: rgba(255, 255, 255, 0.103);
+        border-radius: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+
+        transition: 0.3s, box-shadow 0.3s;
+      }
+
+      #divs:hover {
+        background-color: rgba(255, 255, 255, 0.055);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
@@ -183,6 +239,46 @@
         you’re starting an episode of your life’s anime, and the theme song’s
         already playing in the background. Let’s go, protagonist.
       </p>
+    </div>
+
+    <div class="footer" id="stuff">
+      <div id="divs">
+        <div class="div1">
+          <h2>About us</h2>
+          <h4>Blog</h4>
+          <h4>Demo</h4>
+          <h4>Customers</h4>
+          <h4>Terms of Service</h4>
+        </div>
+        <div class="div2">
+          <h2>Contact Us</h2>
+          <h4>Jobs</h4>
+          <h4>Support</h4>
+          <h4>Contact</h4>
+          <h4>Sponsorships</h4>
+        </div>
+        <div class="div3">
+          <h2>Social Media</h2>
+          <h4>Instagram</h4>
+          <h4>Facebook</h4>
+          <h4>Youtube</h4>
+          <h4>Twitter</h4>
+        </div>
+      </div>
+    </div>
+
+    <hr
+      style="
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        width: 80%;
+        align-self: center;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      "
+    />
+    <div class="footer" id="copyright">
+      <p>© Copyrights 2025 | All Rights Reserved</p>
     </div>
 
     <script>
